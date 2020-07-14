@@ -3630,6 +3630,24 @@ py_library(
         "@six_archive//:six",
     ],
 )
+py_library(
+    name="dynamic_embedding_ops",
+    srcs=["ops/dynamic_embedding_ops.py"],
+    srcs_version="PY2AND3",
+    deps=[
+        ":array_ops",
+        ":constant_op",
+        ":control_flow_ops",
+        ":data_flow_ops",
+        ":dtypes",
+        ":init_ops",
+        ":lookup_ops",
+        ":math_ops",
+        ":resource_variable_ops",
+        ":sparse_tensor",
+        ":variable_scope",
+    ],
+)
 
 py_library(
     name = "embedding_ops",
@@ -5411,6 +5429,7 @@ py_library(
     srcs_version = "PY2AND3",
     deps = [
         ":training_lib",
+        "//tensorflow/python:dynamic_embedding_ops",
         "//tensorflow/python/training/tracking:base",
         "//tensorflow/python/training/tracking:python_state",
         "//tensorflow/python/training/tracking:util",

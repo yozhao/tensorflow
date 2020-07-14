@@ -24,6 +24,7 @@ TENSORFLOW_API_INIT_FILES = [
     "distribute/cluster_resolver/__init__.py",
     "distribute/experimental/__init__.py",
     "dtypes/__init__.py",
+    "dynamic_embedding/__init__.py",
     "errors/__init__.py",
     "experimental/__init__.py",
     "experimental/tensorrt/__init__.py",
